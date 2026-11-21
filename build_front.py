@@ -44,98 +44,114 @@ SR = lambda s: font(LDIR + "LiberationSans-Regular.ttf", s)
 # ---------------------------------------------------------------- data
 
 HERO = ["RUSSIAN MISSILES HIT POLAND"]
-HERO_DECK = ("Two missiles and a drone cross into NATO land \u2014 Tusk calls it a deliberate "
-              "provocation; Rutte flies to Warsaw today. No injuries.")
+HERO_DECK = ("Russian missiles cross into Poland \u2014 Tusk calls it a deliberate "
+              "provocation. No injuries.")
 SUBHERO = "KYIV BRIDGES HIT IN MASSIVE STRIKE"
 SUBHERO_DECK = ("400+ drones and 110 missiles, 27 ballistic \u2014 8 killed as Russia answers "
                  "the Kerch bridge attack.")
 
 NUMBERS = [
-    ("2", "missiles land\nin Poland"),
+    ("3", "missiles downed\nover Riyadh"),
     ("400+", "drones fired\nat Ukraine"),
     ("110", "missiles in\none night"),
     ("8", "killed across\nUkraine"),
-    ("\u20ac1bn", "EU military\naid to Kyiv"),
-    ("\u22125.3%", "Nasdaq on\nFriday"),
-    ("370k", "evacuated\nfrom Akvan"),
+    ("\u20ac90bn", "EU aid to Kyiv\nby end-2027"),
+    ("7th", "straight fall\non Wall St"),
+    ("300k", "evacuated\nfrom Akvan"),
 ]
 
-REGIONS = [("EUROPE", 7), ("AMERICAS", 12), ("ASIA", 5),
-           ("MIDDLE EAST", 2), ("AFRICA", 1), ("WORLD", 3)]
-TOTAL_STORIES = 30  # 2 heroes + 4 features + 24 briefs
+REGIONS = [("EUROPE", 9), ("AMERICAS", 12), ("ASIA", 7),
+           ("MIDDLE EAST", 3), ("AFRICA", 3), ("WORLD", 3), ("SPACE", 1)]
+TOTAL_STORIES = 38  # 2 heroes + 4 features + 32 briefs
 
 FEATURES = [
     ("RIYADH INTERCEPTS\n3 MISSILES",
-     "Houthi rockets downed over Riyadh on Saturday \u2014 second attack in days.",
+     "Three ballistic missiles downed over Riyadh on Saturday.",
      "riyadh"),
-    ("MARKETS ROUT:\nS&P \u22123.7%",
-     "Nasdaq \u22125.3%, down for the year; Dow \u2212950, worst week in 18 months.",
+    ("MARKETS ROUT:\n7TH STRAIGHT FALL",
+     "Seventh straight fall; worst week since April 2025.",
      "markets"),
-    ("BITCOIN UNDER\n$60,000",
-     "First time since July; about $59,100 as November's slide tops 20%.",
-     "bitcoin"),
+    ("BEPICOLOMBO\nAT MERCURY",
+     "Eight-year trip ends Saturday; orbit burn at Mercury.",
+     "space"),
     ("AKVAN FADES\nOVER INDIA",
-     "No deaths as it weakens; 370,000 evacuated, 209 mm of rain in Ganjam.",
+     "300,000 evacuated; no deaths as it weakens to a depression.",
      "cyclone"),
 ]
 
-# (headline, deck, region) — 24 briefs, one story each.
+# (headline, deck, region) — 32 briefs, one story each.
 BRIEFS = [
     ("COP31 slips into overtime",
-     "Third draft due Saturday; Panama may block it.", "WORLD"),
-    ("UK and EU sign reset deals",
-     "Burnham signs food, carbon and youth-mobility pacts.", "EUROPE"),
-    ("EU approves \u20ac1bn arms aid",
-     "Joint kit buys for Kyiv, delivery by end of 2027.", "EUROPE"),
-    ("US, China: humans run war AI",
-     "Trump and Xi agree humans must oversee military AI.", "ASIA"),
-    ("Trump: bring back Huang",
-     "Trump urges Nvidia to restore its ex-CEO; board says no.", "AMERICAS"),
+     "Third draft due Saturday; Panama may block.", "WORLD"),
+    ("UK and EU sign reset",
+     "Burnham signs food, carbon, youth pacts.", "EUROPE"),
+    ("EU gives Kyiv \u20ac90bn",
+     "\u20ac90bn by end-2027, plus \u20ac70bn NATO aid.", "EUROPE"),
+    ("US, China: humans run AI",
+     "Trump and Xi: humans must oversee war AI.", "ASIA"),
+    ("Trump: restore Huang",
+     "Trump urges Nvidia to restore ex-CEO.", "AMERICAS"),
     ("SEC probes Nvidia books",
-     "SEC examines Nvidia books, Reuters cites sources.", "AMERICAS"),
-    ("US weighs new Iran strikes",
-     "Trump mulls action as the military warns of strain.", "M. EAST"),
-    ("Senate blocks war-powers bid",
-     "Iran resolution fails 51\u201348 after passing the House.", "AMERICAS"),
-    ("Trump pardons Pete Rose",
-     "Posthumous pardon for the late baseball star.", "AMERICAS"),
+     "SEC examines Nvidia books, sources say.", "AMERICAS"),
+    ("US weighs Iran strikes",
+     "Trump mulls action as military warns.", "M. EAST"),
+    ("Senate blocks war bid",
+     "Iran resolution fails 51\u201348 in the Senate.", "AMERICAS"),
+    ("Trump pardons Rose",
+     "Posthumous pardon for baseball star.", "AMERICAS"),
     ("LA shaken by 4.2 quake",
-     "Commerce tremor at 3:25 a.m.; no damage reported.", "AMERICAS"),
+     "Commerce tremor at 3:25 a.m.; no damage.", "AMERICAS"),
     ("Mongolia's president goes",
-     "Parliament accepts it; election due within 4 months.", "ASIA"),
-    ("Court: Myanmar committed genocide",
-     "World Court rules on the Rohingya case at The Hague.", "ASIA"),
-    ("Mamdani: shut Rikers by 2032",
-     "New York mayor-elect sets a date to close the jail.", "AMERICAS"),
+     "Parliament accepts it; election due soon.", "ASIA"),
+    ("Court: Myanmar genocide",
+     "World Court rules on the Rohingya case.", "ASIA"),
+    ("Mamdani: shut Rikers",
+     "Mayor-elect sets a date to close the jail.", "AMERICAS"),
     ("ANC fights for its cities",
-     "South Africa's ruling party battles to hold key metros.", "AFRICA"),
-    ("Bukele seeks a third term",
-     "El Salvador move could keep him in power until 2033.", "AMERICAS"),
-    ("Denmark: Russia plotted killing",
-     "Moscow accused of a plot to kill a US-Ukrainian rapper.", "EUROPE"),
-    ("Nepal's new PM faces India test",
-     "Balendra Shah navigates ties with the old neighbour.", "ASIA"),
-    ("US releases more UFO film",
-     "Newly declassified footage was shot in the Middle East.", "AMERICAS"),
-    ("Hegseth curbs Canada ties",
-     "Secret memo restricts US\u2013Canada defence ties.", "AMERICAS"),
+     "Ruling party battles to hold key metros.", "AFRICA"),
+    ("Bukele seeks third term",
+     "Move could keep him in power until 2033.", "AMERICAS"),
+    ("Denmark: Russia plot",
+     "Moscow accused of plot to kill artist.", "EUROPE"),
+    ("Nepal PM faces India test",
+     "Balendra Shah navigates ties with India.", "ASIA"),
+    ("US releases UFO film",
+     "New footage was shot in the Middle East.", "AMERICAS"),
+    ("Hegseth curbs Canada",
+     "Secret memo restricts defence ties.", "AMERICAS"),
     ("French police sentenced",
-     "Officers jailed over beating of producer Michel Zecler.", "EUROPE"),
-    ("19 years in Sikh murder plot",
-     "Indian man sentenced over a US assassination scheme.", "AMERICAS"),
-    ("Cost-of-living protests spread",
-     "Marches sweep European cities over prices and housing.", "EUROPE"),
-    ("Trump: ban AI centres abroad",
-     "Trump threatens to stop US firms building them abroad.", "AMERICAS"),
+     "Officers jailed over beating of producer.", "EUROPE"),
+    ("19 years in Sikh plot",
+     "Indian man sentenced over US murder plot.", "AMERICAS"),
+    ("Cost-of-living protests",
+     "Marches sweep European cities over prices.", "EUROPE"),
+    ("Trump: ban AI centres",
+     "Threatens to stop firms building abroad.", "AMERICAS"),
     ("Gold hits 14-month low",
-     "Metal posts a 9.4% weekly loss as the sell-off spreads.", "WORLD"),
+     "Metal posts 9.4% weekly loss in sell-off.", "WORLD"),
+    # --- 8 new verified 21-Nov stories (v2) ---
+    ("UK expels Myanmar attach\u00e9",
+     "After ICJ genocide verdict; envoy summoned.", "ASIA"),
+    ("Sudan drone war toll",
+     "UN: 2,230+ civilians dead Jan\u2013Oct 2026.", "AFRICA"),
+    ("Kenya Ebola countdown",
+     "WHO: 9 cases, 2 deaths; watch ends 23 Dec.", "AFRICA"),
+    ("Ukraine hits Rubicon",
+     "Russian drone-team base struck in Kursk.", "EUROPE"),
+    ("France seeks UN meeting",
+     "After strikes kill 8, damage Kyiv mission.", "EUROPE"),
+    ("Iraq moves Jurf al-Nasr",
+     "Troops begin relocation at the base.", "M. EAST"),
+    ("Xi warns on Taiwan",
+     "Says Taiwan could complicate US\u2013China ties.", "ASIA"),
+    ("Trump\u2013Xi\u2013Putin summit",
+     "Trilateral peace declaration in Shenzhen.", "WORLD"),
 ]
 
-DATE_CHECK = ("DATE CHECK \u2014 SATURDAY 21 NOVEMBER 2026:  Rutte flies to Warsaw today  \u00b7  "
-               "Riyadh's 3-missile intercept came at 02:40 UTC  \u00b7  COP31's third draft is due "
-               "this morning.")
-FOOTER = ("Sources: AP \u00b7 Reuters \u00b7 BBC \u00b7 USGS \u00b7 IMD  \u2014  All facts checked on "
-          "Saturday 21 November 2026  \u00b7  30 stories")
+DATE_CHECK = ("DATE CHECK \u2014 SATURDAY 21 NOVEMBER 2026:  BepiColombo fires its engines "
+               "into Mercury orbit today  \u00b7  COP31's third draft is due this morning.")
+FOOTER = ("Sources: AP \u00b7 Reuters \u00b7 BBC \u00b7 USGS \u00b7 IMD \u00b7 UN \u00b7 ESA  \u2014  All facts checked on "
+          "Saturday 21 November 2026  \u00b7  38 stories")
 
 # Coarse continent outlines as (lon, lat) — drawn equirectangular, my own roughs.
 CONTINENTS = {
@@ -192,6 +208,8 @@ PINS = [
     (106.9, 47.9, "ULAANBAATAR", -92, -12),
     (-118.2, 34.0, "LOS ANGELES", -96, 2),
     (-74.0, 40.7, "NEW YORK", 8, -12),
+    (32.5, 15.6, "KHARTOUM", 8, 2),
+    (36.8, -1.3, "NAIROBI", 8, 8),
 ]
 
 # ---------------------------------------------------------------- helpers
@@ -270,6 +288,20 @@ def draw_feature_art(d, kind, x, y, w, h):
         d.text((cx - 13, cy - 20), "B", font=B(38), fill=(120, 78, 0))
         d.line([(cx - 17, cy - 14), (cx + 15, cy - 14)], fill=(120, 78, 0), width=3)
         d.line([(cx - 17, cy + 12), (cx + 15, cy + 12)], fill=(120, 78, 0), width=3)
+    elif kind == "space":
+        d.rectangle([x, y, x + w, y + h], fill=(10, 16, 40))
+        for sx, sy in [(18, 12), (60, 24), (120, 10), (180, 20), (210, 12), (90, 8)]:
+            d.ellipse([x + sx - 2, y + sy - 2, x + sx + 2, y + sy + 2], fill=(255, 255, 255))
+        # orbit arc + spacecraft
+        d.arc([x + 30, y - 30, x + w - 10, y + h + 10], 300, 60, fill=(255, 200, 60), width=3)
+        d.ellipse([x + w - 40, y + 14, x + w - 32, y + 22], fill=(255, 200, 60))
+        # Mercury disc with craters
+        cx, cy, r = x + w // 2 - 20, y + h // 2 + 6, 26
+        d.ellipse([cx - r, cy - r, cx + r, cy + r], fill=(180, 160, 140),
+                  outline=(120, 100, 80), width=2)
+        for ox, oy, rr in [(-10, -8, 4), (8, 2, 5), (-2, 10, 3)]:
+            d.ellipse([cx + ox - rr, cy + oy - rr, cx + ox + rr, cy + oy + rr],
+                      fill=(140, 120, 100))
     elif kind == "cyclone":
         d.rectangle([x, y, x + w, y + h], fill=(222, 236, 246))
         cx, cy = x + w // 2, y + h // 2
@@ -420,24 +452,24 @@ def build():
     draw_map(d, MARGIN + 1, y + 1, CW - 2, map_h - 2)
     y += map_h + 10
 
-    # --- briefs
+    # --- briefs: 4 columns x 8 rows
     d.text((MARGIN, y), "THE DAY IN BRIEF", font=B(13), fill=NAVY)
-    d.text((W - MARGIN - 200, y), "24 MORE STORIES", font=B(13), fill=RED)
+    d.text((W - MARGIN - 200, y), "32 MORE STORIES", font=B(13), fill=RED)
     y += 20
-    assert len(BRIEFS) == 24, f"expected 24 briefs, got {len(BRIEFS)}"
-    col_w = (CW - 2 * 16) / 3
-    row_h = 24
+    assert len(BRIEFS) == 32, f"expected 32 briefs, got {len(BRIEFS)}"
+    col_w = (CW - 3 * 16) / 4
+    row_h = 22
     for idx, (head, deck, region) in enumerate(BRIEFS):
-        col, row = idx % 3, idx // 3
+        col, row = idx % 4, idx // 4
         bx = MARGIN + col * (col_w + 16)
         by = y + row * row_h
         tag = region.upper()
         d.text((bx, by), tag, font=B(10), fill=RED)
         hx = bx + d.textlength(tag, font=B(10)) + 6
-        fit_check(d, head, B(13), bx + col_w - hx, f"brief head {head}")
-        d.text((hx, by - 1), head, font=B(13), fill=BLACK)
-        fit_check(d, deck, R(11), col_w, f"brief deck {deck}")
-        d.text((bx, by + 13), deck, font=R(11), fill=GREY)
+        fit_check(d, head, B(12), bx + col_w - hx, f"brief head {head}")
+        d.text((hx, by - 1), head, font=B(12), fill=BLACK)
+        fit_check(d, deck, R(10), col_w, f"brief deck {deck}")
+        d.text((bx, by + 12), deck, font=R(10), fill=GREY)
     y += 8 * row_h + 8
 
     # --- date check box
